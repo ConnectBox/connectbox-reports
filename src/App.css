@@ -1,0 +1,8 @@
+.App {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  right: 20px;
+  bottom: 10px;
+  overflow: scroll;
+}

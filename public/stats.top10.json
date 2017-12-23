@@ -1,0 +1,92 @@
+{
+  "hour": [
+    {
+      "resource": "/content/README.txt",
+      "count": 10
+    },
+    {
+      "resource": "/content/index.html",
+      "count": 5
+    },
+    {
+      "resource": "/content/static-site-assets/connectbox-static.css",
+      "count": 2
+    },
+    {
+      "resource": "/content/throughput-test/10MB.bin",
+      "count": 1
+    }
+  ],
+  "month": [
+    {
+      "resource": "/content/README.txt",
+      "count": 122
+    },
+    {
+      "resource": "/content/index.html",
+      "count": 89
+    },
+    {
+      "resource": "/content/static-site-assets/connectbox-static.css",
+      "count": 77
+    },
+    {
+      "resource": "/content/throughput-test/10MB.bin",
+      "count": 11
+    }
+  ],
+  "day": [
+    {
+      "resource": "/content/README.txt",
+      "count": 31
+    },
+    {
+      "resource": "/content/index.html",
+      "count": 25
+    },
+    {
+      "resource": "/content/static-site-assets/connectbox-static.css",
+      "count": 17
+    },
+    {
+      "resource": "/content/throughput-test/10MB.bin",
+      "count": 1
+    }
+  ],
+  "year": [
+    {
+      "resource": "/content/README.txt",
+      "count": 555
+    },
+    {
+      "resource": "/content/index.html",
+      "count": 432
+    },
+    {
+      "resource": "/content/static-site-assets/connectbox-static.css",
+      "count": 233
+    },
+    {
+      "resource": "/content/throughput-test/10MB.bin",
+      "count": 22
+    }
+  ],
+  "week": [
+    {
+      "resource": "/content/README.txt",
+      "count": 33
+    },
+    {
+      "resource": "/content/index.html",
+      "count": 22
+    },
+    {
+      "resource": "/content/static-site-assets/connectbox-static.css",
+      "count": 18
+    },
+    {
+      "resource": "/content/throughput-test/10MB.bin",
+      "count": 2
+    }
+  ]
+}

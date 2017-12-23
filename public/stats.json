@@ -1,0 +1,138 @@
+{
+  "month": [
+    {
+      "date": "201712",
+      "stats": [
+        {
+          "resource": "/content/README.txt",
+          "count": 7
+        },
+        {
+          "resource": "/content/index.html",
+          "count": 4
+        },
+        {
+          "resource": "/content/static-site-assets/connectbox-static.css",
+          "count": 3
+        },
+        {
+          "resource": "/content/throughput-test/10MB.bin",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "201711",
+      "stats": [
+        {
+          "resource": "/content/README.txt",
+          "count": 17
+        },
+        {
+          "resource": "/content/index.html",
+          "count": 14
+        },
+        {
+          "resource": "/content/static-site-assets/connectbox-static.css",
+          "count": 13
+        },
+        {
+          "resource": "/content/throughput-test/100MB.bin",
+          "count": 1
+        },
+        {
+          "resource": "/content/throughput-test/10MB.bin",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "year": [
+    {
+      "date": "2017",
+      "stats": [
+        {
+          "resource": "/content/README.txt",
+          "count": 222
+        },
+        {
+          "resource": "/content/index.html",
+          "count": 184
+        },
+        {
+          "resource": "/content/static-site-assets/connectbox-static.css",
+          "count": 145
+        },
+        {
+          "resource": "/content/throughput-test/10MB.bin",
+          "count": 23
+        }
+      ]
+    },
+    {
+      "date": "2016",
+      "stats": [
+        {
+          "resource": "/content/README.txt",
+          "count": 200
+        },
+        {
+          "resource": "/content/index.html",
+          "count": 212
+        },
+        {
+          "resource": "/content/static-site-assets/connectbox-static.css",
+          "count": 150
+        },
+        {
+          "resource": "/content/throughput-test/10MB.bin",
+          "count": 75
+        }
+      ]
+    }
+  ],
+  "week": [
+    {
+      "date": "2017W51",
+      "stats": [
+        {
+          "resource": "/content/README.txt",
+          "count": 65
+        },
+        {
+          "resource": "/content/index.html",
+          "count": 45
+        },
+        {
+          "resource": "/content/static-site-assets/connectbox-static.css",
+          "count": 32
+        },
+        {
+          "resource": "/content/throughput-test/10MB.bin",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "date": "2017W50",
+      "stats": [
+        {
+          "resource": "/content/README.txt",
+          "count": 61
+        },
+        {
+          "resource": "/content/index.html",
+          "count": 35
+        },
+        {
+          "resource": "/content/static-site-assets/connectbox-static.css",
+          "count": 25
+        },
+        {
+          "resource": "/content/throughput-test/10MB.bin",
+          "count": 2
+        }
+      ]
+    }
+  ]
+}
