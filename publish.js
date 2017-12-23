@@ -136,7 +136,7 @@ async function main (publishDir) {
   await copyFileAsync(`build/static/js/main.${jsKey}.js.map`, `${staticJs}/main.js.map`)
 
   // Remove the unique keys
-  await writeFileAsync(`${root}/index.html`, (await readFileAsync('build/index.html')).toString().replace(new RegExp(`.${jsKey}`, 'g'), '').replace(new RegExp(`.${cssKey}`, 'g'), ''))
+  await writeFileAsync(`${root}/index.html`, (await readFileAsync('build/index.html')).toString().replace(new RegExp(`.${jsKey}`, 'g'), '').replace(new RegExp(`.${cssKey}`, 'g'), '').replace(new RegExp('/static', 'g'), 'static'))
 }
 
 main(process.argv[2])
