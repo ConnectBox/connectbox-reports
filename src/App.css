@@ -6,3 +6,11 @@
   bottom: 10px;
   overflow: scroll;
 }
+
+.filterSelect {
+    margin: 8px;
+}
+
+.filterSelect select {
+    margin: 4px;
+}

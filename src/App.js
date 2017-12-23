@@ -109,7 +109,7 @@ class App extends Component {
       )
     }
     return (
-      <div>
+      <div className="filterSelect">
         <select
           defaultValue={category}
           onChange={this.handleCategoryChange}>
