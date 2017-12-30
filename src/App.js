@@ -47,7 +47,7 @@ class App extends Component {
             return result
           }, {})
         })
-        console.log(reportData)
+
         category = categories.length > 0 ? categories[0] : null
         subcategories = Object.keys(reportData[category]).sort().reverse()
       } else {
@@ -93,6 +93,10 @@ class App extends Component {
     this.setState({subcategory})
   }
 
+  handleBack = (evt) => {
+    window.history.back()
+  }
+
   renderControls = () => {
     const { categories, category, subcategories, subcategory } = this.state
 
@@ -132,7 +136,13 @@ class App extends Component {
         </div>
       )
     } else if (error) {
-      console.error(error)
+      if (error.response.status === 404) {
+        return (
+          <div className='App'>
+            Specified <a href={`/${report}.json`}>report</a> does not currently exist.
+          </div>
+        )
+      }
       return (
         <div className='App'>
           Unexpected Error!
@@ -142,7 +152,10 @@ class App extends Component {
 
     const columns = [{
       Header: 'Content',
-      accessor: 'resource'
+      accessor: 'resource',
+      Cell: row => (
+        <a href={row.value}>{decodeURIComponent(row.value)}</a>
+      )
     }, {
       Header: 'Hits',
       accessor: 'count',
@@ -152,7 +165,10 @@ class App extends Component {
     return (
       <div className='App'>
         <div className='header'>
-          <span>{title}</span>
+          <span>
+            <i onClick={this.handleBack} className='fa fa-arrow-left fa-lg backButton' aria-hidden='true'></i>
+            {title}
+          </span>
           {this.renderControls()}
         </div>
         <ReactTable
@@ -160,6 +176,8 @@ class App extends Component {
           columns={columns}
           defaultPageSize={10}
           pageSizeOptions={[10, 20, 100]}
+          showPageSizeOptions={report !== 'stats.top10'}
+          showPageJump
         />
         <div className='footer'>
           Download <a href={`/${report}.json`}>report</a>

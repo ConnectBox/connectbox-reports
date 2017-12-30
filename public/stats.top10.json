@@ -15,6 +15,10 @@
     {
       "resource": "/content/throughput-test/10MB.bin",
       "count": 1
+    },
+    {
+      "resource": "/content/misc/%D9%84%D8%A7%D9%86.pdf",
+      "count": 1
     }
   ],
   "month": [
