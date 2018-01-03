@@ -31,6 +31,24 @@ class App extends Component {
     this.setState({report, title})
   }
 
+  scoreCategory = (category) => {
+    if (category === 'hour') {
+      return 0
+    } else if (category === 'day') {
+      return 1
+    } else if (category === 'week') {
+      return 2
+    } else if (category === 'month') {
+      return 3
+    } else if (category === 'year') {
+      return 4
+    }
+  }
+
+  categoryComparator = (a, b) => {
+    return this.scoreCategory(a) - this.scoreCategory(b)
+  }
+
   loadReport = async (name) => {
     try {
       const res = await axios.get(name)
@@ -56,6 +74,8 @@ class App extends Component {
         category = categories.length > 0 ? categories[0] : null
         subcategories = []
       }
+
+      categories.sort(this.categoryComparator)
 
       const subcategory = subcategories.length > 0 ? subcategories[0] : null
 
