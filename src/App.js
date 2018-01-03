@@ -66,18 +66,26 @@ class App extends Component {
           }, {})
         })
 
-        category = categories.length > 0 ? categories[0] : null
+        if (this.state.category === null) {
+          category = categories.length > 0 ? categories[0] : null
+        } else {
+          category = this.state.category
+        }
         subcategories = Object.keys(reportData[category]).sort().reverse()
       } else {
         reportData = res.data
         categories = Object.keys(res.data)
-        category = categories.length > 0 ? categories[0] : null
+        if (this.state.category === null) {
+          category = categories.length > 0 ? categories[0] : null
+        } else {
+          category = this.state.category
+        }
         subcategories = []
       }
 
       categories.sort(this.categoryComparator)
 
-      const subcategory = subcategories.length > 0 ? subcategories[0] : null
+      const subcategory = this.state.subcategory === null ? (subcategories.length > 0 ? subcategories[0] : null) : this.state.subcategory
 
       this.setState({reportData,
         loading: false, categories, category,
@@ -97,20 +105,21 @@ class App extends Component {
   }
 
   handleCategoryChange = (evt) => {
-    const { report, reportData } = this.state
+    const { report } = this.state
     const category = evt.target.value
     if (report === 'stats') {
-      const subcategories = Object.keys(reportData[category]).sort().reverse()
-      const subcategory = subcategories[0]
-      this.setState({category, subcategories, subcategory})
+      this.setState({category, subcategory: null})
     } else {
-      this.setState({category})
+      this.setState({category, subcategory: null})
     }
+    this.loadReport(`/${report}.json`)
   }
 
   handleSubcategoryChange = (evt) => {
+    const { report } = this.state
     const subcategory = evt.target.value
     this.setState({subcategory})
+    this.loadReport(`/${report}.json`)
   }
 
   handleBack = (evt) => {
